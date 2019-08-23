@@ -9,11 +9,17 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://github.com/*/composer.json"],
-            "js": ["composer.js"]
+            "matches": ["*://github.com/*"],
+            "js": ["content_script.js"]
         }
     ],
+    "background": {
+        "scripts": ["background.js"]
+    },
     "permissions": [
-        "https://packagist.org/*"
+        "https://packagist.org/*",
+        "*://github.com/*",
+        "webNavigation",
+        "tabs"
     ]
 }
