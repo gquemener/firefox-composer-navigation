@@ -15,11 +15,5 @@
     ],
     "background": {
         "scripts": ["background.js"]
-    },
-    "permissions": [
-        "https://packagist.org/*",
-        "*://github.com/*",
-        "webNavigation",
-        "tabs"
-    ]
+    }
 }

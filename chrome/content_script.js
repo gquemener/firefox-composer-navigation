@@ -1,4 +1,3 @@
-console.log('running...');
 (function() {
     if (-1 === window.location.href.indexOf('composer.json')) {
         return;
@@ -57,7 +56,6 @@ console.log('running...');
     };
 
     var injectLink = function(dependency) {
-        console.log(dependency);
         if (null === dependency.repository) {
             return;
         }
