@@ -9,7 +9,13 @@
         let dependencies = [];
         for (let node of nodes) {
             const content = node.textContent;
-            if (content.includes('require') || content.includes('replace')) {
+            if (
+                content.includes('require') ||
+                content.includes('replace') ||
+                content.includes('provide') ||
+                content.includes('suggest') ||
+                content.includes('conflict')
+            ) {
                 inDependencyBlock = true;
                 continue;
             }
